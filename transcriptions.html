@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>guiszk@home > newtab</title>
+    <title>guiszk@home > music</title>
 
     <style>
         html {
@@ -10,7 +10,6 @@
             color: #c5c8c6;
             display: flex;
             font: 22px/1 "Inconsolata", monospace;
-            height: 100%;
             justify-content: center;
         }
 
@@ -21,7 +20,7 @@
             color: #c5c8c6; <!-- white text color -->
             display: flex;
             flex-direction: column;
-            min-height: 36ch;
+            min-height: 32ch;
             min-width: 50vw;
             padding: 2em;
         }
@@ -58,23 +57,7 @@
         }
 
         ul:nth-child(5n + 1) li:first-child {
-            color: #a54242;
-        }
-
-        ul:nth-child(5n + 2) li:first-child {
-            color: #de935f;
-        }
-
-        ul:nth-child(5n + 3) li:first-child {
-            color: #f0c674;
-        }
-
-        ul:nth-child(5n + 4) li:first-child {
-            color: #8c9440;
-        }
-
-        ul:nth-child(5n + 5) li:first-child {
-            color: #85678f;
+            color: #c5c8c6;
         }
 
         li:first-child {
@@ -113,32 +96,23 @@
     </style>
 </head>
 <body>
-    <p><span>guiszk@home &gt; </span>newtab</p>
-
+    <p><span>guiszk@home &gt; </span>music</p>
     <nav>
-        <ul>
-            <li>links</li>
-            <li><a href="https://github.com/guiszk">github</a></li>
-            <li><a href="https://gitlab.com/guiszk">gitlab</a></li>
-            <li><a href="mailto:guiszk@protonmail.com">email</a></li>
+        <ul id="songlist">
+            <li>total <span id="songcount"></span></li>
+                <li><p>Feb 09 03:57 <a href="https://www.youtube.com/watch?v=FtpgTq4gQRc">&#91;source&#93;</a> <a href="transcriptions/a_quiet_place.pdf">a quiet place &#40;take 6&#41;</a></li></p>
+                <li><p>Feb 02 21:00 <a href="https://www.youtube.com/watch?v=K7MvKrBSqZ0">&#91;source&#93;</a> <a href="transcriptions/alice_in_wonderland_paul_desmond.pdf">alice in wonderland &#40;paul desmond&#41;</a></li></p>
+                <li><p>Jan 23 18:52 <a href="https://www.youtube.com/watch?v=ZJADfRDUjQM">&#91;source&#93;</a> <a href="transcriptions/celia.pdf">celia</a></li></p>
+                <li><p>Jan 21 17:10 <a href="https://www.youtube.com/watch?v=EOgqPJ7tsBU">&#91;source&#93;</a> <a href="transcriptions/childrens_song_6.pdf">children&apos;s song &#35;6</a></li></p>
+                <li><p>Jan 10 01:48 <a href="https://www.youtube.com/watch?v=U4GP9yXearA">&#91;source&#93;</a> <a href="transcriptions/donna_lee_mancuso.pdf">donna lee &#40;matteo mancuso&#41;</a></li></p>
+                <li><p>Jan 05 09:20 <a href="https://www.youtube.com/watch?v=-oTLShYt0dI">&#91;source&#93;</a> <a href="transcriptions/illusion.pdf">illusion</a></li></p>
+                <li><p>Jan 03 21:21 <a href="https://www.youtube.com/watch?v=cUo0NlxPDBU">&#91;source&#93;</a> <a href="transcriptions/xote_cavaco.pdf">xote cavaco</a></li></p>
         </ul>
-
-        <ul>
-            <li>projects</li>
-            <li><a href="https://github.com/guiszk/extractpanels">extractpanels</a></li>
-            <li><a href="https://github.com/guiszk/palettemaker">palettemaker</a></li>
-            <li><a href="https://github.com/guiszk/wallgen">wallgen</a></li>
-            <li><a href="https://github.com/guiszk/tvshow">tvshow</a></li>
-            <li><a href="https://github.com/guiszk/vault">vault</a></li>
-            <li><a href="https://github.com/guiszk/dots">dots</a></li>
-        </ul>
-
-        <ul>
-            <li>music</li>
-            <li><a href="./transcriptions.html">transcriptions</a></li>
-            <li><a href="./listening.html">listening to</a></li>
-            <li><a href="./music.html">my music</a></li>
-        </ul>
+        <script type="text/javascript">
+            var lilist = document.getElementById("songlist").getElementsByTagName("li");
+            var num = lilist.length - 1
+            document.getElementById("songcount").innerHTML = num;
+        </script>
     </nav>
 
     <p>
