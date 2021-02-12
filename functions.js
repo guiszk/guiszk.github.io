@@ -24,6 +24,9 @@ function getinput(ti) {
         case "tvshow":
             window.location.href = "https://github.com/guiszk/tvshow";
             break;
+        case "vault":
+            window.location.href = "https://github.com/guiszk/vault";
+            break;
         case "dots":
             window.location.href = "https://gitlab.com/guiszk/dots";
             break;
