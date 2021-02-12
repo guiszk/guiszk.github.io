@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>guiszk@home > music</title>
+
+    <style>
+        html {
+            align-items: center;
+            background-color: #bfbfbf; <!-- light gray -->
+            color: #c5c8c6;
+            display: flex;
+            font: 22px/1 "Inconsolata", monospace;
+            justify-content: center;
+        }
+
+        body {
+            background-color: #1d1f21; <!-- dark gray (terminal bg) -->
+            border-radius: 2px;
+            box-shadow: 1px 1px 6px #1d1f2187;
+            color: #c5c8c6; <!-- white text color -->
+            display: flex;
+            flex-direction: column;
+            min-height: 32ch;
+            min-width: 50vw;
+            padding: 2em;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p span {
+            color: #848384; <!-- guiszk@home -->
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            column-gap: 2em;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 1em 0;
+        }
+
+        ul:nth-child(5n + 1) li:first-child {
+            color: #c5c8c6;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            margin: 0 0 1em;
+        }
+
+        input {
+            background-color: #1d1f21;
+            color: #c5c8c6;
+            font: 22px/1 "Inconsolata", monospace;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            outline: none;
+            min-width: 45vw;
+        }
+
+        div #indent {
+            text-indent: 4px;
+        }
+
+        p #cursor {
+            background-color: #a1a1a1;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <p><span>guiszk@home &gt; </span>music</p>
+    <nav>
+        <ul id="songlist">
+            <li>total <span id="songcount"></span></li>
+                <li><p>Feb 12 00:19 <a href="music/disoriented.mp3">disoriented</a></li></p>
+                <li><p>Feb 12 00:11 <a href="music/lonely_woman.mp3">lonely_woman</a></li></p>
+                <li><p>Feb 12 00:08 <a href="music/warp.mp3">warp</a></li></p>
+                <li><p>Feb 11 23:58 <a href="music/at.mp3">at</a></li></p>
+                <li><p>Feb 11 23:45 <a href="music/hip.mp3">hip</a></li></p>
+                <li><p>Feb 11 23:42 <a href="music/synth.mp3">synth</a></li></p>
+                <li><p>Feb 11 23:38 <a href="music/tclav.mp3">tclav</a></li></p>
+                <li><p>Feb 11 23:31 <a href="music/textures6.mp3">textures6</a></li></p>
+                <li><p>Feb 11 23:31 <a href="music/textures5.mp3">textures5</a></li></p>
+                <li><p>Feb 11 23:30 <a href="music/textures4.mp3">textures4</a></li></p>
+                <li><p>Feb 11 23:29 <a href="music/textures3.mp3">textures3</a></li></p>
+                <li><p>Feb 11 23:28 <a href="music/textures2.mp3">textures2</a></li></p>
+                <li><p>Feb 11 23:27 <a href="music/textures1.mp3">textures1</a></li></p>
+                <li><p>Feb 11 23:20 <a href="music/textures.mp3">textures</a></li></p>
+                <li><p>Feb 11 23:16 <a href="music/sequence.mp3">sequence</a></li></p>
+                <li><p>Feb 11 23:12 <a href="music/reich1.mp3">reich1</a></li></p>
+                <li><p>Feb 11 23:10 <a href="music/reich.mp3">reich</a></li></p>
+                <li><p>Feb 11 23:08 <a href="music/amphibia1.mp3">amphibia1</a></li></p>
+                <li><p>Feb 11 23:03 <a href="music/frere_jacques.mp3">frere_jacques</a></li></p>
+                <li><p>Feb 11 23:01 <a href="music/woke_up_solo.mp3">woke_up_solo</a></li></p>
+                <li><p>Feb 11 22:55 <a href="music/tart_toter.mp3">tart_toter</a></li></p>
+                <li><p>Feb 11 22:47 <a href="music/hilda.mp3">hilda</a></li></p>
+                <li><p>Jan 28 00:18 <a href="music/trap_kipo.mp3">trap_kipo</a></li></p>
+                <li><p>Dec 28 07:28 <a href="music/kate_tempest_ballad_of_a_hero_beat.mp3">kate_tempest_ballad_of_a_hero_beat</a></li></p>
+                <li><p>Sep 21 02:26 <a href="music/david_linch_weather_report_beat.mp3">david_linch_weather_report_beat</a></li></p>
+                <li><p>Sep 04 14:54 <a href="music/amphibia.mp3">amphibia</a></li></p>
+                <li><p>Jul 09 23:24 <a href="music/trash.mp3">trash</a></li></p>
+                <li><p>Jul 05 20:00 <a href="music/danny_boy.mp3">danny_boy</a></li></p>
+                <li><p>Jun 21 19:25 <a href="music/star.mp3">star</a></li></p>
+                <li><p>Jun 15 22:45 <a href="music/bass_iharmu.mp3">bass_iharmu</a></li></p>
+                <li><p>May 12 12:23 <a href="music/organ.mp3">organ</a></li></p>
+        </ul>
+        <script type="text/javascript">
+            var lilist = document.getElementById("songlist").getElementsByTagName("li");
+            var num = lilist.length - 1
+            document.getElementById("songcount").innerHTML = num;
+        </script>
+    </nav>
+
+    <p>
+        <span>guiszk@home &gt; </span>
+        <input type="text" id="terminputId" placeholder="_"></input>
+        <script src="functions.js"></script>
+        <script type="text/javascript">
+            const terminput = document.getElementById("terminputId")
+            terminput.addEventListener('keydown', (e) => {
+                if(e.key === 'Enter') {
+                    getinput(terminput);
+                }
+            });
+        </script>
+        <p>
+            <p id="stdout"></p>
+        </p>
+    </p>
+</body>
+</html>

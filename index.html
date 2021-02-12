@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>guiszk@home > newtab</title>
+
+    <style>
+        html {
+            align-items: center;
+            background-color: #bfbfbf; <!-- light gray -->
+            color: #c5c8c6;
+            display: flex;
+            font: 22px/1 "Inconsolata", monospace;
+            height: 100%;
+            justify-content: center;
+        }
+
+        body {
+            background-color: #1d1f21; <!-- dark gray (terminal bg) -->
+            border-radius: 2px;
+            box-shadow: 1px 1px 6px #1d1f2187;
+            color: #c5c8c6; <!-- white text color -->
+            display: flex;
+            flex-direction: column;
+            min-height: 32ch;
+            min-width: 50vw;
+            padding: 2em;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p span {
+            color: #848384; <!-- guiszk@home -->
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            column-gap: 2em;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            padding: 1em 0;
+        }
+
+        ul:nth-child(5n + 1) li:first-child {
+            color: #a54242;
+        }
+
+        ul:nth-child(5n + 2) li:first-child {
+            color: #de935f;
+        }
+
+        ul:nth-child(5n + 3) li:first-child {
+            color: #f0c674;
+        }
+
+        ul:nth-child(5n + 4) li:first-child {
+            color: #8c9440;
+        }
+
+        ul:nth-child(5n + 5) li:first-child {
+            color: #85678f;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            margin: 0 0 1em;
+        }
+
+        input {
+            background-color: #1d1f21;
+            color: #c5c8c6;
+            font: 22px/1 "Inconsolata", monospace;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            outline: none;
+            min-width: 45vw;
+        }
+
+        div #indent {
+            text-indent: 4px;
+        }
+
+        p #cursor {
+            background-color: #a1a1a1;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <p><span>guiszk@home &gt; </span>newtab</p>
+
+    <nav>
+        <ul>
+            <li>links</li>
+            <li><a href="https://github.com/guiszk">github</a></li>
+            <li><a href="https://gitlab.com/guiszk">gitlab</a></li>
+            <li><a href="mailto:guiszk@protonmail.com">email</a></li>
+        </ul>
+
+        <ul>
+            <li>projects</li>
+            <li><a href="https://github.com/guiszk/palettemaker">palettemaker</a></li>
+            <li><a href="https://github.com/guiszk/extractpanels">extractpanels</a></li>
+            <li><a href="https://github.com/guiszk/wallgen">wallgen</a></li>
+            <li><a href="https://github.com/guiszk/tvshow">tvshow</a></li>
+            <li><a href="https://github.com/guiszk/dots">dots</a></li>
+        </ul>
+
+        <ul>
+            <li>music</li>
+            <li><a href="./listening.html">listening to</a></li>
+            <li><a href="./music.html">my music</a></li>
+        </ul>
+    </nav>
+
+    <p>
+        <span>guiszk@home &gt; </span>
+        <input type="text" id="terminputId" placeholder="_"></input>
+        <script src="functions.js"></script>
+        <script type="text/javascript">
+            const terminput = document.getElementById("terminputId")
+            terminput.addEventListener('keydown', (e) => {
+                if(e.key === 'Enter') {
+                    getinput(terminput);
+                }
+            });
+        </script>
+        <p>
+            <p id="stdout"></p>
+        </p>
+    </p>
+</body>
+</html>
