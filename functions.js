@@ -24,6 +24,9 @@ function getinput(ti) {
         case "tvshow":
             window.location.href = "https://github.com/guiszk/tvshow";
             break;
+        case "vault":
+            window.location.href = "https://github.com/guiszk/vault";
+            break;
         case "dots":
             window.location.href = "https://gitlab.com/guiszk/dots";
             break;
@@ -39,6 +42,7 @@ function getinput(ti) {
         case "adventure time":
         case "adventure":
         case "time":
+        case "at":
         case "quotes":
             window.location.href = "./at.html";
             break;
@@ -560,6 +564,6 @@ function getimg(){
         "at/young_bubblegum_come_on_youll.jpg",
         "at/young_bubblegum_sighs.jpg",
         "at/zoom_to_bebe_upside_down.jpg"];
-    var num = Math.floor(Math.random() * (imgarr.length+1)); 
+    var num = Math.floor(Math.random() * (imgarr.length+1));
     window.location.href = imgarr[num];
 }
