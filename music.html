@@ -56,6 +56,19 @@
             padding: 1em 0;
         }
 
+        button {
+            background-color: inherit;
+            color: inherit;
+            font: inherit;
+            padding: 0;
+            border: none;
+            background: none;
+        }
+
+        button:hover {
+            font-weight: bold;
+        }
+
         ul:nth-child(5n + 1) li:first-child {
             color: #c5c8c6;
         }
@@ -98,47 +111,71 @@
 <body>
     <p><span>guiszk@home &gt; </span>music</p>
     <nav>
-        <ul id="songlist">
-            <li>total <span id="songcount"></span></li>
-                <li><p>Feb 12 00:19 <a href="music/disoriented.mp3">disoriented</a></li></p>
-                <li><p>Feb 12 00:11 <a href="music/lonely_woman.mp3">lonely_woman</a></li></p>
-                <li><p>Feb 12 00:08 <a href="music/warp.mp3">warp</a></li></p>
-                <li><p>Feb 11 23:58 <a href="music/at.mp3">at</a></li></p>
-                <li><p>Feb 11 23:45 <a href="music/hip.mp3">hip</a></li></p>
-                <li><p>Feb 11 23:42 <a href="music/synth.mp3">synth</a></li></p>
-                <li><p>Feb 11 23:38 <a href="music/tclav.mp3">tclav</a></li></p>
-                <li><p>Feb 11 23:31 <a href="music/textures6.mp3">textures6</a></li></p>
-                <li><p>Feb 11 23:31 <a href="music/textures5.mp3">textures5</a></li></p>
-                <li><p>Feb 11 23:30 <a href="music/textures4.mp3">textures4</a></li></p>
-                <li><p>Feb 11 23:29 <a href="music/textures3.mp3">textures3</a></li></p>
-                <li><p>Feb 11 23:28 <a href="music/textures2.mp3">textures2</a></li></p>
-                <li><p>Feb 11 23:27 <a href="music/textures1.mp3">textures1</a></li></p>
-                <li><p>Feb 11 23:20 <a href="music/textures.mp3">textures</a></li></p>
-                <li><p>Feb 11 23:16 <a href="music/sequence.mp3">sequence</a></li></p>
-                <li><p>Feb 11 23:12 <a href="music/reich1.mp3">reich1</a></li></p>
-                <li><p>Feb 11 23:10 <a href="music/reich.mp3">reich</a></li></p>
-                <li><p>Feb 11 23:08 <a href="music/amphibia1.mp3">amphibia1</a></li></p>
-                <li><p>Feb 11 23:03 <a href="music/frere_jacques.mp3">frere_jacques</a></li></p>
-                <li><p>Feb 11 23:01 <a href="music/woke_up_solo.mp3">woke_up_solo</a></li></p>
-                <li><p>Feb 11 22:55 <a href="music/tart_toter.mp3">tart_toter</a></li></p>
-                <li><p>Feb 11 22:47 <a href="music/hilda.mp3">hilda</a></li></p>
-                <li><p>Jan 28 00:18 <a href="music/trap_kipo.mp3">trap_kipo</a></li></p>
-                <li><p>Dec 28 07:28 <a href="music/kate_tempest_ballad_of_a_hero_beat.mp3">kate_tempest_ballad_of_a_hero_beat</a></li></p>
-                <li><p>Sep 21 02:26 <a href="music/david_linch_weather_report_beat.mp3">david_linch_weather_report_beat</a></li></p>
-                <li><p>Sep 04 14:54 <a href="music/amphibia.mp3">amphibia</a></li></p>
-                <li><p>Jul 09 23:24 <a href="music/trash.mp3">trash</a></li></p>
-                <li><p>Jul 05 20:00 <a href="music/danny_boy.mp3">danny_boy</a></li></p>
-                <li><p>Jun 21 19:25 <a href="music/star.mp3">star</a></li></p>
-                <li><p>Jun 15 22:45 <a href="music/bass_iharmu.mp3">bass_iharmu</a></li></p>
-                <li><p>May 12 12:23 <a href="music/organ.mp3">organ</a></li></p>
+        <script type="text/javascript">
+            function togglehide(x){
+                var ul = document.getElementById(x);
+                if(ul.style.display == "none") {
+                    ul.style.display = "block";
+                } else {
+                    ul.style.display = "none";
+                }
+            }
+        </script>
+        <ul>
+            <button onclick="togglehide('songlist')">productions</button>
+            <ul id="songlist">
+                <ul>total <span id="songcount"></span>
+                    <li><p>Feb 12 00:19 <a href="music/productions/disoriented.mp3">disoriented</a></li></p>
+                    <li><p>Feb 12 00:11 <a href="music/productions/lonely_woman.mp3">lonely woman</a></li></p>
+                    <li><p>Feb 12 00:08 <a href="music/productions/warp.mp3">warp</a></li></p>
+                    <li><p>Feb 11 23:58 <a href="music/productions/at.mp3">at</a></li></p>
+                    <li><p>Feb 11 23:45 <a href="music/productions/hip.mp3">hip</a></li></p>
+                    <li><p>Feb 11 23:42 <a href="music/productions/synth.mp3">synth</a></li></p>
+                    <li><p>Feb 11 23:38 <a href="music/productions/tclav.mp3">tclav</a></li></p>
+                    <li><p>Feb 11 23:31 <a href="music/productions/textures6.mp3">textures6</a></li></p>
+                    <li><p>Feb 11 23:31 <a href="music/productions/textures5.mp3">textures5</a></li></p>
+                    <li><p>Feb 11 23:30 <a href="music/productions/textures4.mp3">textures4</a></li></p>
+                    <li><p>Feb 11 23:29 <a href="music/productions/textures3.mp3">textures3</a></li></p>
+                    <li><p>Feb 11 23:28 <a href="music/productions/textures2.mp3">textures2</a></li></p>
+                    <li><p>Feb 11 23:27 <a href="music/productions/textures1.mp3">textures1</a></li></p>
+                    <li><p>Feb 11 23:20 <a href="music/productions/textures.mp3">textures</a></li></p>
+                    <li><p>Feb 11 23:16 <a href="music/productions/sequence.mp3">sequence</a></li></p>
+                    <li><p>Feb 11 23:12 <a href="music/productions/reich1.mp3">reich1</a></li></p>
+                    <li><p>Feb 11 23:10 <a href="music/productions/reich.mp3">reich</a></li></p>
+                    <li><p>Feb 11 23:08 <a href="music/productions/amphibia1.mp3">amphibia1</a></li></p>
+                    <li><p>Feb 11 23:03 <a href="music/productions/frere_jacques.mp3">frere jacques</a></li></p>
+                    <li><p>Feb 11 23:01 <a href="music/productions/woke_up_solo.mp3">woke up solo</a></li></p>
+                    <li><p>Feb 11 22:55 <a href="music/productions/tart_toter.mp3">tart toter</a></li></p>
+                    <li><p>Feb 11 22:47 <a href="music/productions/hilda.mp3">hilda</a></li></p>
+                    <li><p>Jan 28 00:18 <a href="music/productions/trap_kipo.mp3">trap kipo</a></li></p>
+                    <li><p>Dec 28 07:28 <a href="music/productions/kate_tempest_ballad_of_a_hero_beat.mp3">kate tempest ballad of a_hero beat</a></li></p>
+                    <li><p>Sep 21 02:26 <a href="music/productions/david_linch_weather_report_beat.mp3">david linch weather report beat</a></li></p>
+                    <li><p>Sep 04 14:54 <a href="music/productions/amphibia.mp3">amphibia</a></li></p>
+                    <li><p>Jul 09 23:24 <a href="music/productions/trash.mp3">trash</a></li></p>
+                    <li><p>Jul 05 20:00 <a href="music/productions/danny_boy.mp3">danny boy</a></li></p>
+                    <li><p>Jun 21 19:25 <a href="music/productions/star.mp3">star</a></li></p>
+                    <li><p>Jun 15 22:45 <a href="music/productions/bass_iharmu.mp3">bass iharmu</a></li></p>
+                    <li><p>May 12 12:23 <a href="music/productions/organ.mp3">organ</a></li></p>
+            </ul>
         </ul>
+        <br>
+        <button onclick="togglehide('reclist')">recordings</button>
+        <ul id="reclist">
+            <ul>total <span id="reccount"></span>
+                <li><p>Dec 23 11:00 <a href="music/recordings/skylark.mp3">skylark</a></li></p>
+                <li><p>Oct 28 13:19 <a href="music/recordings/moon_and_sand.mp3">moon and sand</a></li></p>
+            </ul>
+        </ul>
+
         <script type="text/javascript">
             var lilist = document.getElementById("songlist").getElementsByTagName("li");
-            var num = lilist.length - 1
+            var lilist1 = document.getElementById("reclist").getElementsByTagName("li");
+            var num = lilist.length
+            var num1 = lilist1.length
             document.getElementById("songcount").innerHTML = num;
+            document.getElementById("reccount").innerHTML = num1;
         </script>
     </nav>
-
     <p>
         <span>guiszk@home &gt; </span>
         <input type="text" id="terminputId" placeholder="_"></input>

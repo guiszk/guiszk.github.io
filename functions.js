@@ -39,6 +39,9 @@ function getinput(ti) {
         case "my music":
             window.location.href = "./music.html";
             break;
+        case "transcriptions":
+            window.location.href = "./transcriptions.html";
+            break;
         case "adventure time":
         case "adventure":
         case "time":
@@ -50,7 +53,7 @@ function getinput(ti) {
             window.location.href = "./index.html"
             break;
         default:
-            let text = "commands&colon;<br>&#91;project name&#93;<br>github<br>gitlab<br>email<br>listening<br>music<br>quotes<br>back";
+            let text = "commands&colon;<br>&#91;project name&#93;<br>github<br>gitlab<br>email<br>listening<br>music<br>transcriptions<br>quotes<br>back";
             document.getElementById("stdout").innerHTML = text;
     }
 }
