@@ -49,6 +49,9 @@ function getinput(ti) {
         case "quotes":
             window.location.href = "./at.html";
             break;
+        case "quiz":
+            window.location.href = "https://adventuretimequiz.herokuapp.com";
+            break;
         case "back":
             window.location.href = "./index.html"
             break;
